@@ -77,17 +77,17 @@ The response will contain an access token.
 
 ## **API Endpoints**
 
-| Method      | Endpoint               | Description |
-|------------|------------------------|-------------|
-| GET        | `/api/user`            | Get authenticated user |
-| GET        | `/api/users`           | List all users |
-| GET        | `/api/users/{user}`    | Get user details |
-| POST       | `/api/register`        | Create a new user |
-| POST       | `/api/login`           | User login |
-| POST       | `/api/logout`          | User logout |
-| POST       | `/api/users`           | Create a new user |
-| PUT/PATCH  | `/api/users/{user}`    | Update user information |
-| DELETE     | `/api/users/{user}`    | Delete a user |
+| Method      | Endpoint               | Description | Protected |
+|------------|------------------------|-------------|-------------|
+| GET        | `/api/user`            | Get authenticated user | Y
+| GET        | `/api/users`           | List all users | Y
+| GET        | `/api/users/{user}`    | Get user details | Y
+| POST       | `/api/register`        | Create a new user | N
+| POST       | `/api/login`           | User login | N
+| POST       | `/api/logout`          | User logout | Y
+| POST       | `/api/users`           | Create a new user | Y
+| PUT/PATCH  | `/api/users/{user}`    | Update user information | Y
+| DELETE     | `/api/users/{user}`    | Delete a user | Y
 
 For protected routes, include the `Authorization` header:
 
